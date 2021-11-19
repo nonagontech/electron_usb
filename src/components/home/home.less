@@ -1,0 +1,106 @@
+#home {
+    background-color:#E1206D;
+    flex:1;
+    width: 100%;
+    height: 100%;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    .close {
+        width: 100%;
+        height: 40px;
+        // background-color: pink;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .max{
+            width: 30px;
+            height: 30px;
+            // background-color: hotpink;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 30px;
+            color: rgb(245, 145, 145);
+            margin-right: 10px;
+            -webkit-app-region: no-drag;
+            
+        }
+        .min{
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            // background-color: hotpink;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 30px;
+            -webkit-app-region: no-drag;
+        }
+    }
+    .heard{
+        width: 100%;
+        background-color: #E1206D;
+        // -webkit-app-region: no-drag;
+        img{
+        
+            padding: 100px 0;
+            margin: 0 auto;
+            display:flex;
+            align-items: center;
+            // background-color: #fff; 
+            width: 80%;
+        }
+
+    }
+    .button {
+        -webkit-app-region: no-drag;
+        // background-color: pink;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+        Button{
+            width: 300px;
+            background-color: #fff;
+            color: #E1206D;
+            border-width: 0;
+            font-size: 20px;
+        }
+        Button:active{
+            opacity: 0.5;
+        }
+    }
+    .button:active{
+        opacity: 0.5;
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .create {
+        -webkit-app-region: no-drag;
+        // background-color: pink;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        Button{
+            width: 300px;
+            background-color: #E1206D;
+            color: #fff;
+            border-width: 0;
+            font-size: 20px;
+            border:2px solid #fff;
+        }
+        Button:active{
+            opacity: 0.5;
+        }
+    }
+    .create:active{
+        opacity: 0.5;
+    }
+    
+    
+}

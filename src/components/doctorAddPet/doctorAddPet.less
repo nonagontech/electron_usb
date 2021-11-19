@@ -1,0 +1,398 @@
+#doctorAddPet{
+    font-family: Arial;
+    MyIcon {
+        font-size: 25px;
+    }
+    position: relative;
+    z-index: 1;
+    //顶部红色的拖拽框
+    .close1 {
+        width: 100%;
+        height: 40px;
+        background-color: #E1206D;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        -webkit-app-region: drag;
+
+        .menu {
+            -webkit-app-region: no-drag;
+            margin-left: 7px;
+            // color: #FEFEFE;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .ant-menu-horizontal {
+                background-color:#E1206D;
+                height: 41px;
+            }
+            .icon {
+                font-size: 25px;
+                // background-color: pink;
+                display: block;
+                height: 38px;
+                line-height: 42px;
+                color: #FEFEFE;
+            }
+            
+        }
+        .text {
+            color: #FEFEFE;
+            font-size: 20px;
+            font-weight: 700;
+            margin-left: 7px;
+        }
+        .maxmin {
+            width: 70px;
+            // flex: 1;
+            
+            // background-color: pink;
+            display: table;
+            .max{
+                width: 30px;
+                height: 30px;
+                // background-color: hotpink;
+                margin-left: 10px;
+                text-align: center;
+                line-height: 30px;
+                font-size: 30px;
+                color: rgb(245, 145, 145);
+                margin-right: 10px;
+                -webkit-app-region: no-drag;
+                // float: left;
+                display:table-cell
+            }
+            .min{
+                // float: left;
+                width: 30px;
+                height: 30px;
+                font-size: 25px;
+                // background-color: hotpink;
+                margin-left: 10px;
+                text-align: center;
+                line-height: 30px;
+                -webkit-app-region: no-drag;
+                display:table-cell
+            }
+        }
+        
+    }
+    .editPetInfo_top{
+        width: 100%;
+        height: 90%;
+        background-color: #fff;
+        width: 800px;
+        height: 680px;
+        padding: 40px;
+        font-family: Arial;
+        .title{
+            font-size: 25px;
+            font-weight: bold;
+            color: #141414;  
+            margin-bottom: 8px;
+        }
+        .petSpecies{
+
+            height: 110px;
+            width: 100%;
+            display: flex;
+
+            .l{
+                flex:1;
+
+                .selectSpecies {
+                    // height: 100px;
+                    width: 100%;
+                    ul {
+                        li {
+                        float:left;
+                        list-style: none;
+                        margin-right: 40px;
+                        // background-color: honeydew;
+                        }
+                    }
+                    .speciesChild{
+                        align-items: center;
+                        justify-content: center;
+                       
+                        display: flex;
+                        flex-direction: column;
+                    
+                        .dog{
+                            background-color: #E1206D;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50px;
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .r{
+                flex:1;
+                align-items: center;
+                justify-content: center;
+                .img{
+                    width: 110px;
+                    height: 110px;
+                    border:1px dotted #4a4a4a ;
+                    margin: 0 auto;
+                    
+
+                    .ciral{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 100px;
+                        // background-color: rgba(225,32,109,0.58);
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        z-index: 40;
+
+                        img{
+                            margin:0 auto;
+                        }
+                        .uploadImg{
+                            display: none;
+                        }
+                        p{
+                            position: absolute;
+                            // background-color: rgba(88,88,88,0.7);
+                            bottom: 0px;
+                            color: #fff;
+                            font-size: 14px;
+                            height: 35px;
+                            width: 100;
+                            // border-bottom-left-radius: 100px;
+                            // border-bottom-right-radius: 100px;
+                            z-index: 38;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .petName{
+
+            height: 110px;
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+
+            .l{
+                flex:1;
+                // background-color: hotpink;
+                padding-top: 50px;
+                p{
+                    // background-color: red;
+                    margin: 0;
+                    color: #a0a0a0;
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+                .infoInput{
+                    border-bottom: 1px solid #D8D8D8;
+                    width: 80%;
+                    // background-color: honeydew;
+                    position: relative;
+                    input{
+                        padding: 0;
+                        color: #4a4a4a;
+                        font-size: 17px;
+                    }
+                    .ibKg{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        border: 1px solid #E1206D;
+                        border-radius: 20px;
+                        height: 30px;
+                        width: 70px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .ibs{
+                            flex:1;
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            cursor: pointer;
+                            height: 100%;
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                        }
+                        .kgs{
+                            flex:1;
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            cursor: pointer;
+                            height: 100%;
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                        }
+                    }
+                    .ant-select-selector{
+                        padding:0;
+                        margin:0;
+                        input{
+                            padding:0;
+                            margin: 0;
+                        }
+                    }
+                }
+
+               
+            }
+            .r{
+                flex:1;
+                padding-top: 50px;
+                p{
+                    // background-color: red;
+                    margin: 0;
+                    color: #a0a0a0;
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+                .infoInput{
+                    border-bottom: 1px solid #D8D8D8;
+                    width: 80%;
+                    // background-color: honeydew;
+                    position: relative;
+                    input{
+                        padding: 0;
+                        color: #4a4a4a;
+                        font-size: 17px;
+                    }
+                    p{
+                        font-size: 17px;
+                        color: #4a4a4a;
+                        cursor: pointer;
+                    }
+                    .calendar{
+                        position: absolute;
+                        // width: 100px;
+                        // height: 100px;
+                        background-color: pink;
+                        display: none;
+                        z-index: 999;
+                        .btn {
+                            // width: 125px;
+                            height: 24px;
+                            background-color: #E1206D;
+                            border-radius: 24px;
+                            color: #FEFEFE;
+                            text-align: center;
+                            cursor: pointer;
+                            padding: 0 5px;
+
+                        }
+
+                    }
+                }
+                .max{
+                    color:#4a4a4a;
+                    font-size: 17px;
+                    flex-direction: row;
+                    display: flex;
+                    align-items: center;
+                    .selected{
+                        width: 15px;
+                        height: 15px;
+                        border: 1px solid #979797;
+                        margin-left: 19px;
+                        cursor: pointer;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                    }
+                }
+                .gender{
+                    border-bottom: 1px solid #D8D8D8;
+                    width: 80%;
+                    height: 5px;
+                    position: relative;
+                    .selectGender{
+                        width: 120px;
+                        height: 70px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        display: flex;
+                        color: #4a4a4a;
+                        font-size: 13px;
+                        .female{
+                            flex:1;
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            flex-direction: column;
+                            .femaleCiral{
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 40px;
+                                align-items: center;
+                                justify-content: center;
+                                display: flex;
+                                margin-bottom: 5px;
+                                cursor: pointer;
+                            }
+                        }
+                        .male{
+                            flex:1;
+                            align-items: center;
+                            justify-content: center;
+                            display: flex;
+                            flex-direction: column;
+                            .maleCiral{
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 40px;
+                                align-items: center;
+                                justify-content: center;
+                                display: flex;
+                                margin-bottom: 5px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .editPetInfo_foot{
+        background-color: #E7E7E7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 180px;
+        width: 100%;
+        .save {
+            width: 45%;
+            height: 40px;
+            background-color: #E1206D;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+
+            color:#fff ;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+}
+.ant-select-selection-search-input{
+    border: none;
+    outline: medium;
+}

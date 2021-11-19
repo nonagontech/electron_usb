@@ -1,0 +1,155 @@
+{
+  "name": "mellaelectron",
+  "version": "v0.2.11",
+  "main": "main.js",
+  "private": true,
+  "author": {
+    "name": "Shaojie Hu",
+    "email": "15256767601@126.com"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.10.2",
+    "babel-plugin-import": "^1.13.3",
+    "customize-cra": "^1.0.0",
+    "echarts": "^5.1.1",
+    "echarts-for-react": "^3.0.1",
+    "electron-is-dev": "^2.0.0",
+    "electron-updater": "^4.3.9",
+    "http-proxy-middleware": "^2.0.1",
+    "less": "^4.1.0",
+    "less-loader": "^7.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-app-rewired": "^2.1.8",
+    "react-dom": "^17.0.1",
+    "react-draggable": "^4.4.3",
+    "react-highlight-words": "^0.16.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "serialport": "^9.1.0",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "dist": "electron-builder --win --x64",
+    "start": "chcp 65001 &&react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "electron": "chcp 65001 &&electron .",
+    "package": "electron-packager ./build mella --platform=win32 --arch=x64 --win --out ./out --electron-version 11.2.0",
+    "rebuild": "yarn electron-rebuild -v 11.2.0",
+    "pack": "electron-builder --dir",
+    "disk": "electron-builder",
+    "release": "cross-env GH_TOKEN=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  electron-builder"
+  },
+  "homepage": "./",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^11.2.0",
+    "electron-builder": "^22.11.7",
+    "electron-rebuild": "^2.3.5",
+    "nodemon": "^2.0.7",
+    "rebuild": "^0.1.2"
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "build": {
+    "productName": "mella",
+    "appId": "com.ai.mella",
+    "copyright": "Copyright © 2021 ${author}",
+    "directories": {
+      "output": "dist1"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "uninstallDisplayName": "mella",
+      "createDesktopShortcut": true
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "main.js",
+      "dist1/**/*",
+      "exe/**/*"
+    ],
+    "extends": null,
+    "win": {
+      "publish": [
+        "github"
+      ],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "extraResources": [
+      {
+        "from": "exe/ch.exe",
+        "to": "exe/ch.exe"
+      },
+      {
+        "from": "exe/CH341PT.DLL",
+        "to": "exe/CH341PT.DLL"
+      },
+      {
+        "from": "exe/CH341S64.SYS",
+        "to": "exe/CH341S64.SYS"
+      },
+      {
+        "from": "exe/CH341S98.SYS",
+        "to": "exe/CH341S98.SYS"
+      },
+      {
+        "from": "exe/ch341SER.CAT",
+        "to": "exe/ch341SER.CAT"
+      },
+      {
+        "from": "exe/CH341SER.INF",
+        "to": "exe/CH341SER.INF"
+      },
+      {
+        "from": "exe/CH341SER.SYS",
+        "to": "exe/CH341SER.SYS"
+      },
+      {
+        "from": "exe/CH341SER.VXD",
+        "to": "exe/CH341SER.VXD"
+      },
+      {
+        "from": "exe/ch1.exe",
+        "to": "exe/ch1.exe"
+      },
+      {
+        "from": "exe/DRVSETUP64/DRVSETUP64.exe",
+        "to": "exe/DRVSETUP64/DRVSETUP64.exe"
+      }
+    ]
+  }
+}
